@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 import Footer from '../footer'
-import ScrollableBox from '../scrollable-box'
 
 const Layout = ({ children, router }) => {
     const bg = useColorModeValue('#E2E8F0', '#4A5568')
