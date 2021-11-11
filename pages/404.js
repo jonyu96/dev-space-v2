@@ -2,7 +2,7 @@ import NextLink from 'next/link'
 import {
     Box,
     Text,
-    Divider,
+    Container,
     Button,
     Image,
     Flex
@@ -11,20 +11,16 @@ import {
 const NotFound = () => {
   return (
     <Box
-        h="100%"
-        w="100%"
         display="flex"
         alignItems="center"
         justifyContent="center"
+        flexDir="column"
     >
-        <Image src="/images/benji.jpg" h="400px" borderRadius={3} alt="My dog Benji" />
-        <Flex ml={5} flexDir="column" fontWeight="bold">
-            <Text display="flex" fontSize="xl">bark bark~</Text>
-            <Text mt={2} fontSize="sm" color="red">404: Page Not Found</Text> 
-            <NextLink href="/">
-                <Button mt={3} borderRadius={3} size="sm" bg="#B7A57A">Return To Home</Button>
-            </NextLink>
+        <Flex alignItems="center" mb={3}>
+            <Text color="red" mr={2}>404:</Text>
+            <Text fontSize="sm" fontWeight="bold">PAGE NOT FOUND</Text> 
         </Flex>
+        <Image src="/images/benji.jpg" h="400px" borderRadius={3} alt="My dog Benji" />
     </Box>
   )
 }

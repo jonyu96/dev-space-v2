@@ -1,9 +1,10 @@
-import { Box, Flex, SimpleGrid, HStack, VStack, Text, Heading, Container, Button, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, SimpleGrid, HStack, VStack, Text, Heading, Container, Button, Wrap, WrapItem, useColorModeValue } from '@chakra-ui/react'
 import { MdOutlineMail, MdOutlineLocationOn } from 'react-icons/md'
 import { FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { BsGlobe } from 'react-icons/bs'
 
 import ExternalLink from '../components/external-link'
+import ScrollableBox from '../components/scrollable-box'
 
 const Content = ({ children }) => (
     <Container fontSize="xs" fontWeight="xs" p={0} maxW="100%">
@@ -127,8 +128,8 @@ const Right = () => (
 
 const Resume = () => {
     return (
-        <Box         
-            h="100%" 
+        <Box 
+            h="100%"
             display="flex" 
             flexDir="column"
         >
@@ -148,58 +149,44 @@ const Resume = () => {
                     Download Resume PDF
                 </Button>
             </ExternalLink>
-            <Box 
-                w="100%"
+            <ScrollableBox 
                 pr={3}
-                overflowY="scroll"
                 display="flex"
                 flexDir="column"
-                css={{
-                    '&::-webkit-scrollbar': {
-                        width: '6px',
-                    },
-                    '&::-webkit-scrollbar-track': {
-                        width: '6px',
-                    },
-                    '&::-webkit-scrollbar-thumb': {
-                        background: useColorModeValue('#E2E8F0', '#4A5568'),
-                        borderRadius: '24px',
-                    },
-                }}
             >
                 <Box display="flex" flexDir="column">
                     <Flex alignItems="center">
-                        <Heading>Jonathan Yu</Heading>
-                        <Text ml={5} fontSize="sm" fontWeight="medium">Software Engineer @ T-Mobile</Text>
+                        <Heading fontSize={['25px', '35px']}>Jonathan Yu</Heading>
+                        <Text ml={5} fontSize={['xs', 'sm']} fontWeight="medium">Software Engineer @ T-Mobile</Text>
                     </Flex>
-                    <HStack spacing={4} mt={2}>
-                        <Flex>
+                    <Wrap spacing={[2, 4]} mt={2} wrap="wrap">
+                        <WrapItem>
                             <MdOutlineMail size={15}/>
-                            <Text ml={2} fontSize={11}>jonathanjyu96@gmail.com</Text>
-                        </Flex>
-                        <Flex>
+                            <Text ml={2} fontSize={[10, 11]}>jonathanjyu96@gmail.com</Text>
+                        </WrapItem>
+                        <WrapItem>
                             <FiPhone size={15}/>
-                            <Text ml={2} fontSize={11}>253-306-9511</Text>
-                        </Flex>
-                        <Flex>
+                            <Text ml={2} fontSize={[10, 11]}>253-306-9511</Text>
+                        </WrapItem>
+                        <WrapItem>
                             <MdOutlineLocationOn size={15}/>
-                            <Text ml={2} fontSize={11}>Tacoma, WA</Text>
-                        </Flex>
-                        <Flex>
+                            <Text ml={2} fontSize={[10, 11]}>Tacoma, WA</Text>
+                        </WrapItem>
+                        <WrapItem>
                             <BsGlobe size={15}/>
-                            <Text ml={2} fontSize={11}>jonathanyu.me</Text>
-                        </Flex>
-                        <Flex>
+                            <Text ml={2} fontSize={[10, 11]}>jonathanyu.me</Text>
+                        </WrapItem>
+                        <WrapItem>
                             <FiGithub size={15}/>
-                            <Text ml={2} fontSize={11}>linkedin.com/in/jonathanyu96/</Text>
-                        </Flex>
-                    </HStack>
+                            <Text ml={2} fontSize={[10, 11]}>linkedin.com/in/jonathanyu96/</Text>
+                        </WrapItem>
+                    </Wrap>
                     <SimpleGrid templateColumns="65% 30%" columnGap="5%" mt="40px">
                         <Left />
                         <Right />
                     </SimpleGrid>
                 </Box>
-            </Box>        
+            </ScrollableBox>        
         </Box>
     )
 }

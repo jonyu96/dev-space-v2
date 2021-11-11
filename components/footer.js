@@ -11,7 +11,7 @@ const Footer = () => (
         alignItems="center"
         justifyContent="center"
     >   
-        <Link display="flex" fontSize={{ base: 'xx-small', md: 'xs' }} href="https://github.com/jonyu96">
+        <Link display="flex" fontSize={{ base: 'xx-small', md: 'xs' }} href="https://github.com/jonyu96/dev-space-v2">
             <Text mr={1}>Designed & Developed by</Text>
             <Text mr={2} fontWeight="bold">Jonathan Yu</Text>
             <Tag color="gray.100" bg="#B7A57A" size="xs" pl={1} pr={1} borderRadius={2}>v2</Tag>

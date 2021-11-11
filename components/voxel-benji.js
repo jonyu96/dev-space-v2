@@ -151,9 +151,9 @@ const VoxelBenji = () => {
 
     return (
         <Box 
+            h="100%"
+            w="100%"
             ref={refContainer}
-            h={["300px", "300px", "350px"]}
-            w={["350px", "350px", "370px"]}
             position="relative"
         />
     )
