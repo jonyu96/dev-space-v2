@@ -30,16 +30,16 @@ export default function Experience() {
       display="flex"
       flexDirection={{ base: 'column', md: 'row' }}
     >
-      <BorderBox flex={1.5} flexDirection="column" mr={{ base: 0, md: 3 }} mb={{ base: 3, md: 0 }} p={3}>
+      <Box display="flex" flex={[1, 2]} flexDirection="column" mr={{ base: 0, md: 3 }} mb={{ base: 3, md: 0 }} p={3}>
         <Text fontSize={15} fontWeight="semibold" mb={3}>Timeline</Text>
-        <Grid flex={1} templateColumns={{ base: "25% 75%", md: "20% 80%"}}>
+        <Grid flex={1} templateColumns={["25% 75%", "15% 80%"]} columnGap={['5%']}>
           <TimelinePicker selectedTimeline={timeline} setTimeline={ setTimelineHandler } />
           <Timeline timeline={timeline} />
         </Grid>
-      </BorderBox>
+      </Box>
 
       <BorderBox flex={1} p={3} flexDirection="column">
-        <Text fontSize={15} fontWeight="semibold">Technologies</Text>
+        <Text fontSize={15} fontWeight="semibold">Tech-Dex</Text>
         <SimpleGrid flex={1} templateRows="1fr 1.5fr">
           <TechnologyPicker setTechnology={ setTechnologyHandler } />
           <TechnologyStats technology={technology} />

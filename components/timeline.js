@@ -48,9 +48,9 @@ const ImageBox = (props) => (
 
 const TimelineInfo = ({ role, place, color, period }) => (
     <Flex flex={1} flexDir="column" justifyContent="center" pl={2}>
-        <Text mb={3} fontSize="xl" fontWeight="bold">{ role }</Text>
-        <Text fontSize={{ base: '10px', md: 'xs' }} fontWeight="medium" color={ color }>{ place }</Text>
-        <Text fontSize={{ base: '10px', md: 'xs' }} fontWeight="medium">{ period }</Text>
+        <Text mb={3} fontSize={['sx', '25px']} fontWeight="bold">{ role }</Text>
+        <Text fontSize={{ base: '10px', md: 'sm' }} fontWeight="bold" color={ color }>{ place }</Text>
+        <Text fontSize={{ base: '10px', md: 'sm' }} fontWeight="bold">{ period }</Text>
     </Flex>
 )
 
@@ -83,7 +83,7 @@ const Timeline = ({ timeline }) => {
                 <TimelineInfo role={ role } place={ place } color={ color } period={ period } />
             </Flex>
             <ScrollableBox
-                mt={3}
+                mt={[1, 5]}
                 h="100%"
                 maxH={["150px", "300px"]}
             >

@@ -55,12 +55,12 @@ const ProjectView = ({ isOpen, onClose, project }) => {
           </Flex>
         </ModalHeader>
         <ModalBody 
-          pt={{ base: 5, md: 7 }}
+          pt={[0, 5]}
           pr={0}
           pl={0}
-          w="100%"
         >
-          <Section w="100%" display="grid" gridTemplateColumns={["1fr", "1fr", "1fr 1.3fr"]} gridGap={[3, 10]}>
+          <Section w="100%" display="grid" gridTemplateColumns={["1fr", "1fr 1fr"]} gridTemplateRows={[".8fr 1fr", "1fr"]}  gridGap={[3, 10]} h="100%"
+          >
             <SectionItem direction="vert">
                 <Container
                   maxW="100%"
@@ -81,22 +81,22 @@ const ProjectView = ({ isOpen, onClose, project }) => {
                   </Flex>
                   { project['overview'] }
                 </Container>
-              </SectionItem>
-              <SectionItem direction="vert">
-                <Box w="100%" display="flex" justifyContent="center">
+            </SectionItem>
+            <SectionItem direction="vert">
+                <Box h="100%" display="flex" alignItems="center" justifyContent="center">
                   {
                     project['platform']==='web' ? (
                       <WebFrame>
-                        <Image fit="cover" align="0 0" src={project['screenshot']} alt="web app screenshot" />
+                        <Image maxH={['175px', '300px']} src={project['screenshot']} alt="web app screenshot" />
                       </WebFrame>
                     ) : (
                       <MobileFrame>
-                        <Image fit="cover" align="0 0" src={project['screenshot']} alt="mobile app screenshot" />
+                        <Image maxH={['100px', '200px']} src={project['screenshot']} alt="mobile app screenshot" />
                       </MobileFrame>
                     )
                   }
                 </Box>
-              </SectionItem>
+            </SectionItem>
           </Section>
         </ModalBody>
         <ModalFooter pl={0} pr={0} display="flex" flexDir={["column", "row"]} alignItems={["flex-start", "center"]}>

@@ -5,7 +5,7 @@ export const MobileFrame = ({ children, ...props }) => {
 
     return (
         <Box
-            h={["200px", "250px"]}
+            h={["175px", "250px"]}
             w={["100px", "150px"]}
             border="2px solid"
             borderColor={borderColor} 

@@ -15,8 +15,9 @@ const INTRO = (
 
         <SectionItem direction="vert">
             <Text mt={2} fontSize={['10px', 'xs']} fontWeight="medium" textAlign="justify">
-                I am a developer located in Seattle, currently over at T-Mobile.
-                Feel free to learn about me as a dev or reach out for any opportunities!
+                I am a young developer who likes to design and craft things for the internet. 
+                Currently, I am located in Tacoma, WA and over at T-Mobile as a SWE. 
+                Feel free to reach out for any opportunities!
             </Text>
         </SectionItem>
     </Section>
