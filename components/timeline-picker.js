@@ -15,6 +15,7 @@ const Bar = chakra(motion.div, {
 })
 
 const TimelinePicker = ({ selectedTimeline, setTimeline }) => {
+    const borderColor = useColorModeValue('gray.800', 'gray.100')
 
     function handleSelect(timeline) {
         setTimeline(timeline)
@@ -24,7 +25,7 @@ const TimelinePicker = ({ selectedTimeline, setTimeline }) => {
         <Box
             height="100%"
             borderRight="2px dotted"
-            borderColor={useColorModeValue('gray.800', 'gray.100')}
+            borderColor={borderColor}
             pt={5}
         >
             <VStack spacing={10}>
@@ -41,7 +42,7 @@ const TimelinePicker = ({ selectedTimeline, setTimeline }) => {
                             { t }
                         </Text>
                         { 
-                            selectedTimeline === t ? <Bar key={t} layoutId="bar" borderColor={useColorModeValue('gray.800', 'gray.100')} transition={{ duration: .2 }}/> 
+                            selectedTimeline === t ? <Bar key={t} layoutId="bar" borderColor={borderColor} transition={{ duration: .2 }}/> 
                                 : null 
                         }
                     </Box>

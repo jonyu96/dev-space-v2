@@ -47,6 +47,7 @@ const Project = ({ project, onOpen, onClick }) => (
             className="project-icon"
             src={project['iconPath']}
             boxSize="50px"
+            alt="project icon"
         />
         <Text fontWeight="bold" fontSize="xs" mt={3}>{ project['name'] }</Text>
         <TypeIdentifier color={project['color']} position="absolute" top={2} left={2} />

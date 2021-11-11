@@ -3,11 +3,11 @@ import { Box, HStack, Circle, Flex, Center, useStyleConfig, useColorModeValue } 
 import Terminal from '../components/terminal'
 import VoxelBenji from "../components/voxel-benji"
 
-const TerminalButtons = () => (
+const TerminalButtons = ({ borderColor }) => (
   <HStack spacing={3} p={3}>
     {
       [ ...Array(3)].map((num, index) => (
-        <Circle key={index} w={13} h={13} border="2px solid" borderColor={useColorModeValue('gray.800', 'gray.100')}/>
+        <Circle key={index} w={13} h={13} border="2px solid" borderColor={borderColor}/>
       )) 
     }
   </HStack>
@@ -16,13 +16,15 @@ const TerminalButtons = () => (
 const Home = () => {
   const styles = useStyleConfig("BorderBox")
 
+  const borderColor = useColorModeValue('gray.800', 'gray.100')
+
   return (
     <Box
       flexDirection="column"
       pb={3}
       __css={styles}
     >
-      <TerminalButtons width={13} height={13} />
+      <TerminalButtons width={13} height={13} borderColor={borderColor} />
 
       <Flex
         h="100%"

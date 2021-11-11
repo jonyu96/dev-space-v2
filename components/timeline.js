@@ -40,6 +40,7 @@ const ImageBox = (props) => (
         border="2px solid"
         borderRadius={5}
         boxSize="100px"
+        alt="picture of me"
         { ...props }
     />
 )

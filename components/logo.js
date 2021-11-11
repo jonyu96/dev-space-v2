@@ -2,10 +2,8 @@ import Link from 'next/link'
 import { Box, Text, Image, useColorModeValue } from '@chakra-ui/react'
 
 const Logo = () => {
-    const tennisBall = '/images/logo.png'
-
     return (
-        <Link href="/">
+        <Link href="/" passHref>
             <Box
                 cursor="pointer"
                 display="inline-flex"  
