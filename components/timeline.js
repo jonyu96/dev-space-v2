@@ -2,6 +2,7 @@ import { Box, Flex, Image, Text, Square, Container, useColorModeValue } from '@c
 
 import Section from './section'
 import SectionItem from './section-item'
+import ScrollableBox from './scrollable-box'
 
 const UW = {
     imagePath: '/images/me-student.jpg',
@@ -73,7 +74,6 @@ const Timeline = ({ timeline }) => {
         <Box
             h="100%"
             maxH={{ base: 270, md: 340 }}
-            overflow="scroll"
             pl={5}
             pr={5}
             flexDir="column"  
@@ -82,22 +82,27 @@ const Timeline = ({ timeline }) => {
                 <ImageBox src={ imagePath } alt={ imageAlt }/>
                 <TimelineInfo role={ role } place={ place } color={ color } period={ period } />
             </Flex>
-            <Section
-                key={timeline}
-                flexDir="column"
-                alignItems="start"
+            <ScrollableBox
                 mt={3}
+                h="100%"
+                maxH={["150px", "300px"]}
             >
-                {
-                    [ ...facts ].map((fact, index) => (
-                        <SectionItem key={index} direction="vert">
-                            <TimelineFact>
-                                { fact }
-                            </TimelineFact>
-                        </SectionItem>
-                    ))
-                }
-            </Section>
+                <Section
+                    key={timeline}
+                    flexDir="column"
+                    alignItems="start"
+                >
+                    {
+                        [ ...facts ].map((fact, index) => (
+                            <SectionItem key={index} direction="vert">
+                                <TimelineFact>
+                                    { fact }
+                                </TimelineFact>
+                            </SectionItem>
+                        ))
+                    }
+                </Section>
+            </ScrollableBox>
         </Box>
     )
 }

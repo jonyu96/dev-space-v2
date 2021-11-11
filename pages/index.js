@@ -1,7 +1,8 @@
 
-import { Box, HStack, Circle, Flex, Center, useStyleConfig, useColorModeValue } from "@chakra-ui/react"
+import { Box, HStack, Circle, Flex, Center, SimpleGrid, useStyleConfig, useColorModeValue } from "@chakra-ui/react"
 import Terminal from '../components/terminal'
 import VoxelBenji from "../components/voxel-benji"
+import BorderBox from "../components/border-box"
 
 const TerminalButtons = ({ borderColor }) => (
   <HStack spacing={3} p={3}>
@@ -19,28 +20,25 @@ const Home = () => {
   const borderColor = useColorModeValue('gray.800', 'gray.100')
 
   return (
-    <Box
+    <BorderBox
       flexDirection="column"
-      pb={3}
-      __css={styles}
+      h="100%"
     >
       <TerminalButtons width={13} height={13} borderColor={borderColor} />
-
-      <Flex
-        h="100%"
-        w="100%"
-        pl={3}
-        pr={3}
-        direction={{ base: 'column-reverse', md: 'row' }}
+      <Flex 
+        flex={1}
+        flexDir={['column-reverse', 'row', 'row']}
+        p={3}
+        pt={0}
       >
         <Box flex={1}>
           <Terminal />
         </Box>
-        <Box flex={1} display="flex" alignItems="center" justifyContent="center">
-          <VoxelBenji/>
+        <Box flex={1}>
+          <VoxelBenji />
         </Box>
       </Flex>
-    </Box>
+    </BorderBox>
   )
 }
 

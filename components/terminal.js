@@ -6,15 +6,15 @@ import Section from "./section"
 import SectionItem from "./section-item"
 
 const INTRO = (
-    <Section mt={3} w="90%">
+    <Section mt={[1, 3]} w={['95%', '90%']}>
         <SectionItem direction="vert">
-            <Text fontSize={{ base: "sm", md: "md" }} textTransform="uppercase" fontWeight="bold" color="#B7A57A" letterSpacing={2}>
+            <Text fontSize={{ base: "sm", md: "lg" }} textTransform="uppercase" fontWeight="bold" color="#B7A57A" letterSpacing={2}>
                 Welcome to my dev space! 🤩
             </Text>
         </SectionItem>
 
         <SectionItem direction="vert">
-            <Text mt={2} fontSize={{ base: "11px", md: "11px" }} fontWeight="medium" textAlign="justify">
+            <Text mt={2} fontSize={['10px', 'xs']} fontWeight="medium" textAlign="justify">
                 I am a developer located in Seattle, currently over at T-Mobile.
                 Feel free to learn about me as a dev or reach out for any opportunities!
             </Text>
@@ -52,11 +52,10 @@ const Terminal = (props) => {
 
     return (
         <Box 
-            flex={1}
-            w="100%"
             h="100%"
+            w="100%"
             bg={useColorModeValue('gray.700', 'gray.900')}
-            p={4}
+            p={[2, 4]}
             display="flex"
             flexDirection="column"
             position="relative"
@@ -64,7 +63,7 @@ const Terminal = (props) => {
         >
             <TerminalText> Last Login: { date } </TerminalText>
             
-            <Grid flex={1} templateRows={{ base: "1.5fr 1fr", md: "1fr 1fr" }} rowGap={2} mt={5}>
+            <Grid flex={1} templateRows="1fr 1fr" rowGap={2} mt={[2, 5]}>
                 <Box>
                     <TerminalTypist index={1} onTypingDoneHandler={() => onTypingDoneHandler}> cat Intro.txt </TerminalTypist>
                     { stage >= 1 ? INTRO : null }

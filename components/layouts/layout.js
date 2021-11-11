@@ -1,18 +1,17 @@
-import { Box, Center } from '@chakra-ui/react'
+import { Box, Container, Center, useColorModeValue } from '@chakra-ui/react'
 import Head from 'next/head'
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 import Footer from '../footer'
+import ScrollableBox from '../scrollable-box'
 
 const Layout = ({ children, router }) => {
+    const bg = useColorModeValue('#E2E8F0', '#4A5568')
 
     return (
-        <Center 
-            position="relative"
+        <Box 
             as="main"  
             h="100vh"
-            minW={375}
-            p={{ base: 3 }}
         >
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,14 +22,16 @@ const Layout = ({ children, router }) => {
             </Head>
             <Navbar path={router.asPath}/>
             <Sidebar />
-            <Box
-                h={["80%", "80%", "400px"]}
-                w={["100%", "90%", "container.md"]}
-            >    
-                { children }
-            </Box>
+            <Center h="100%">
+                <Container
+                    maxW="container.lg"
+                    h={['calc(100% - 200px)', '50%']}
+                >    
+                    { children }
+                </Container>
+            </Center>
             <Footer />
-        </Center>
+        </Box>
     )
 }
 

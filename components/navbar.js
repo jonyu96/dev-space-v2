@@ -32,11 +32,10 @@ const Navbar = (props) => {
         >
             <Container
                 display="flex"
-                maxW={["100%", "90%", "container.md"]}
+                maxW={["100%", "90%", "container.lg"]}
                 wrap="wrap"
                 alignItems="center"
                 justifyContent="space-between"
-                p={[3, 3, 0]}
             >
                 <Logo />
                 <Stack
