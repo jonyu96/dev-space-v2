@@ -10,8 +10,6 @@ import BorderBox from '../components/border-box'
 
 export default function Experience() {
 
-  const styles = useStyleConfig("BorderBox")
-
   const [timeline, setTimeline] = useState("UW")
   const [technology, setTechnology] = useState("Angular")
 

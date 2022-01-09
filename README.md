@@ -2,7 +2,9 @@
 
 # Dev Space V2 🤖
 
-🤖 Version 2 of my personal website developed using **React, Next.js, Framer Motin, and Chakra UI**. For the 3D voxel model, I used MagicaVoxel/Blender for design and shadow baking and Three.js for integration with React application. I also used Adobe XD for the initial design and prototype. Website is deployed and hosted on Vercel.
+🤖 Version 2 of my personal website developed using **React, Next.js, Framer Motion, and Chakra UI** and deployed and hosted on Vercel.
+
+Voxel model was created using MagicaVoxel and Blender and integrated using ThreeJS. 
 
 <br>
 
@@ -17,8 +19,7 @@
 ## Features
 - Supports light/dark theme
 - Mobile friendly
-- Cool rotating, zoomable, 3D Voxel art
-- Interactive pages 
+- Cool rotating voxel model of my dog playing piano
 
 <br>
 

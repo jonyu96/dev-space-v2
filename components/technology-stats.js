@@ -71,8 +71,8 @@ const StatHeader = ({ technology }) => (
         pb={2}
     >
         <Flex alignItems="center">
-            <StatKey>Name: </StatKey>
-            <Text ml={3} fontSize={["sm", "lg"]} fontWeight="bold">{ technology }</Text>
+            {/* <StatKey>Name: </StatKey> */}
+            <Text fontSize={["sm", "lg"]} fontWeight="bold">{ technology }</Text>
         </Flex>
         <Link href={STATS[technology].link} _hover={{ color: '#B7A57A' }}>
             <FiExternalLink cursor="pointer"/>    

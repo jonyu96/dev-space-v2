@@ -11,7 +11,7 @@ export const TerminalText = ({ children, ...props }) => (
     <Text
         fontFamily="Roboto Mono"
         fontWeight="regular"
-        fontSize="xx-small"
+        fontSize="x-small"
         { ...props }
     >
         { children }

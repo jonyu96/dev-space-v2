@@ -7,7 +7,7 @@ const BorderBox = ({ children, ...props }) => {
         <Box
             {...props}
             display= "flex"
-            position= "relative"
+            // position= "relative"
             border= "1.75px solid"
             borderColor={borderColor}
             borderRadius= "5px"
