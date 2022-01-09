@@ -1,7 +1,8 @@
 import { Box, HStack, Circle, Flex, useColorModeValue } from '@chakra-ui/react'
 
 export const MobileFrame = ({ children, ...props }) => {
-    const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
+    // const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.300') 
+    const borderColor = useColorModeValue('gray.800', 'gray.100')
 
     return (
         <Box
@@ -30,7 +31,8 @@ export const MobileFrame = ({ children, ...props }) => {
 }
 
 export const WebFrame = ({ children, ...props }) => {
-    const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
+    // const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.300')
+    const borderColor = useColorModeValue('gray.800', 'gray.100')
 
     return (
         <Box 

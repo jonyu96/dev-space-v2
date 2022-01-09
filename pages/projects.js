@@ -6,26 +6,7 @@ import Project from '../components/project'
 import ProjectView from '../components/project-view'
 import Section from '../components/section'
 import SectionItem from '../components/section-item'
-
-const Filter = () => (
-  <Flex justifyContent="space-between">
-    <Box
-      id="sample-input-field"
-      w="20%"
-      display="flex"
-      pt={1.5}
-      pb={1.5}
-      alignItems="center"
-      borderBottom="2px solid"
-      borderColor={useColorModeValue('gray.800', 'gray.100')}
-      fontWeight="medium"
-      fontSize="xs"
-    >
-      Filter by Tags
-    </Box>
-
-  </Flex>
-)
+import ScrollableBox from '../components/scrollable-box'
 
 const Legend = () => (
   <Flex alignItems="center">
@@ -35,17 +16,6 @@ const Legend = () => (
     <Text fontSize="xs" fontWeight="medium">Personal</Text>
   </Flex>
 )
-
-const parent = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-        staggerChildren: .2,
-        duration: 1.3
-    }
-  }
-}
 
 const ProjectsWrapper = motion(SimpleGrid)
 
@@ -67,7 +37,7 @@ export default function Projects() {
   }
   
     return (
-      <Box display="flex" flexDir="column" h="100%">
+      <ScrollableBox display="flex" flexDir="column" h="100%">
         {/* <Filter /> */}
         <Flex w="100%" alignItems="center" justifyContent="flex-end">
           <Legend />
@@ -81,7 +51,6 @@ export default function Projects() {
                 pt={5} 
                 columns={[2, 2, 4]}
                 spacing={5}
-                overflow="scroll"
               >   
                 {
                   [ ...projects ].map((p, index) => (
@@ -99,7 +68,7 @@ export default function Projects() {
             </Section>
           ) : null
         }
-      </Box>
+      </ScrollableBox>
     )
   }
   
