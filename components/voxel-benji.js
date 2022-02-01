@@ -122,11 +122,11 @@ const VoxelBenji = () => {
     
                 if (frame <= 40) {
                     const pos = initialCameraPosition
-                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+                    // const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
     
                     camera.position.y = 15
-                    camera.position.x = pos.x * Math.cos(rotSpeed) + pos.z * Math.sin(rotSpeed)
-                    camera.position.z = pos.z * Math.cos(rotSpeed) - pos.x * Math.sin(rotSpeed)
+                    camera.position.x = pos.x
+                    camera.position.z = pos.z
                     camera.lookAt(target)
                 } else {
                     controls.update()
