@@ -1,7 +1,8 @@
 import NextLink from 'next/link'
-import { Box, Stack, Icon } from "@chakra-ui/react"
+import { Box, Stack, Icon, Tooltip } from "@chakra-ui/react"
 import { FiLinkedin, FiInstagram, FiMail } from "react-icons/fi"
 import { FaGithubAlt } from "react-icons/fa"
+import { GrAttachment } from "react-icons/gr"
 import { motion } from "framer-motion"
 
 import ExternalLink from './external-link'
@@ -36,6 +37,10 @@ const Sidebar = () => (
 
             <ExternalLink href="mailto:jonathanjyu96@gmail.com">
                 <Icon as={FiMail} boxSize={{ base: "15px", md: "15px", lg: "20px" }}/>
+            </ExternalLink>
+            
+            <ExternalLink href="/data/resume.pdf">
+                <Icon as={GrAttachment} boxSize={{ base: "15px", md: "15px", lg: "20px" }}/>
             </ExternalLink>
         </Stack>
     </Box>

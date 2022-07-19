@@ -39,9 +39,9 @@ export default function Projects() {
     return (
       <ScrollableBox display="flex" flexDir="column" h="100%">
         {/* <Filter /> */}
-        <Flex w="100%" alignItems="center" justifyContent="flex-end">
+        {/* <Flex w="100%" alignItems="center" justifyContent="flex-end">
           <Legend />
-        </Flex>
+        </Flex> */}
 
         {
           projects ? (

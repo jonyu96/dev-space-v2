@@ -10,13 +10,18 @@ import {
     MenuList,
     MenuItem,
     IconButton,
-    useColorModeValue
+    useColorModeValue,
+    Button,
+    Icon
 } from '@chakra-ui/react'
+
 import { FaHamburger } from 'react-icons/fa'
+import { FiDownload } from 'react-icons/fi'
 
 import Logo from './logo'
 import NavLink from './navlink'
 import ThemeToggle from './theme-toggle'
+import ExternalLink from './external-link'
 
 const Navbar = (props) => {
     const { path } = props
@@ -49,7 +54,7 @@ const Navbar = (props) => {
                     <NavLink href="/" path={path}>Home</NavLink>
                     <NavLink href="/experience" path={path}>Experience</NavLink>
                     <NavLink href="/projects" path={path}>Projects</NavLink>
-                    <NavLink href="/resume" path={path}>Resume</NavLink>
+                    {/* <NavLink href="/resume" path={path}>Resume</NavLink> */}
                 </Stack>
 
                 <Flex>
@@ -77,9 +82,9 @@ const Navbar = (props) => {
                                 <NextLink href="/projects" passHref>
                                     <MenuItem fontWeight="medium">Projects</MenuItem>
                                 </NextLink>
-                                <NextLink href="/resume" passHref>
+                                {/* <NextLink href="/resume" passHref>
                                     <MenuItem fontWeight="medium">Resume</MenuItem>
-                                </NextLink>
+                                </NextLink> */}
                             </MenuList>
                         </Menu>
                     </Box>

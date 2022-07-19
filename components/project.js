@@ -50,7 +50,7 @@ const Project = ({ project, onOpen, onClick }) => (
             alt="project icon"
         />
         <Text fontWeight="bold" fontSize="xs" mt={3}>{ project['name'] }</Text>
-        <TypeIdentifier color={project['color']} position="absolute" top={2} left={2} />
+        {/* <TypeIdentifier color={project['color']} position="absolute" top={2} left={2} /> */}
   </ProjectBox>
 )
 

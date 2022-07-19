@@ -1,4 +1,5 @@
-import { Box, Link, Tag, Text } from "@chakra-ui/react"
+import { Box, Link, Tag, Text, Button, useColorModeValue } from "@chakra-ui/react"
+import ExternalLink from '../components/external-link'
 
 const Footer = () => (
     <Box

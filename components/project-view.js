@@ -49,8 +49,8 @@ const ProjectView = ({ isOpen, onClose, project }) => {
             <Text fontSize={{ base: "xs", md: "lg" }} fontWeight="bold">{ project['name'] }</Text>
           </Flex>
           <Flex alignItems="center">
-            <Text fontSize="xs" fontWeight="bold" color={project['color']}>{ project['company'] }</Text>
-            <Text fontSize="xs" ml={2} mr={2}>|</Text>
+            {/* <Text fontSize="xs" fontWeight="bold" color={project['color']}>{ project['company'] }</Text>
+            <Text fontSize="xs" ml={2} mr={2}>|</Text> */}
             <Text fontSize="xs" fontWeight="bold">{ project['year'] }</Text>
           </Flex>
         </ModalHeader>
@@ -71,12 +71,12 @@ const ProjectView = ({ isOpen, onClose, project }) => {
                   <Flex flex={1} mb={2} alignItems="center" justifyContent="space-between">
                     <Text variant="key">Overview</Text>
                     <HStack spacing={1}>
-                      {/* <ExternalLink mr={3} href={ 'source' in project ? project['source'] : null } isExternal={true}>
+                      <ExternalLink mr={3} href={ 'source' in project ? project['source'] : null } isExternal={true}>
                         <Icon as={FiGithub} boxSize={{ base: "15px", md: "15px", lg: "17px" }}/>
                       </ExternalLink>
                       <ExternalLink href={ 'link' in project ? project['link'] : null } isExternal>
                         <Icon as={FiExternalLink} boxSize={{ base: "15px", md: "15px", lg: "17px" }}/>
-                      </ExternalLink> */}
+                      </ExternalLink>
                     </HStack>
                   </Flex>
                   { project['overview'] }

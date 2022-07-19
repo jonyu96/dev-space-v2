@@ -30,7 +30,7 @@ const TimelinePicker = ({ selectedTimeline, setTimeline }) => {
         >
             <VStack spacing={10}>
                 {
-                ["UW", "T-Mobile"].map((t) => (
+                ["UW", "T-Mobile", "Microsoft"].map((t) => (
                     <Box key={t} w="100%" display="flex" justifyContent="flex-end" pr={5} position="relative">
                         <Text 
                             fontSize="xs" 

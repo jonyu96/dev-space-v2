@@ -2,8 +2,6 @@
     {
         "name": "Admin UI",
         "iconPath": "/icons/admin-ui-icon.svg",
-        "company": "T-Mobile",
-        "color": "#EA0A8E",
         "year": 2021,
         "source": "https://github.com/jonyu96/admin-ui",
         "link": "https://zed-admin-ui.herokuapp.com",
@@ -20,10 +18,7 @@
     {
         "name": "Gaming Dashboard",
         "iconPath": "/icons/gaming-dashboard-icon.svg",
-        "company": "T-Mobile",
-        "color": "#EA0A8E",
         "year": 2020,
-        "type": "work",
         "source": "https://github.com/jonyu96/gaming-dashboard",
         "link": "https://cloud-gaming-dashboard.herokuapp.com",
         "overview": "A internal, data visualization platform for viewing cloud gaming user and network engagement stats during the initial launch. This interactive data application was developed using Python and Plotly's Dash framework. Stats are loaded from local JSON files which are periodically checked for updates using multi-threading. The backend pipeline consists of Bash/PySpark scripts that pull and aggregates data daily from Hadoop Hive tables to the JSON files.",
@@ -39,8 +34,6 @@
     {
         "name": "App Classify",
         "iconPath": "/icons/app-classify-icon.svg",
-        "company": "T-Mobile",
-        "color": "#EA0A8E",
         "year": 2020,
         "source": "https://github.com/jonyu96/app-classification-table",
         "link": "https://app-classify-table.herokuapp.com",
@@ -54,8 +47,6 @@
     {
         "name": "Network Digest",
         "iconPath": "/icons/network-digest-icon.svg",
-        "color": "#EA0A8E",
-        "company": "T-Mobile",
         "year": 2019,
         "link": "https://xd.adobe.com/view/68d1bad3-03bc-4929-67c0-116e7501c492-1ee0",
         "overview": "A dashboard design prototype developed with Adobe XD for visualizing user and network engagment stats/insights in various categories. This is a POC of an internal application or platform, used by executives, for quickly digesting up-to-date stats and insights. Network Digest was created during my internship in 2019.",
@@ -68,8 +59,6 @@
     {
         "name": "LOL-TANA",
         "iconPath": "/icons/lol-tana-icon.svg",
-        "color": "#B7A57A",
-        "company": "Jon's Tech",
         "year": 2019,
         "source": "https://github.com/jonyu96/LOL-TANA",
         "overview": "Think of the Cortana from the Halo Series. LOL-Tana is an in-game, AI for a League of Legends (LoL) game that displays the win percentage calculated based on important in-game factors. The user chooses which Champion is being played and throughout the game, enters different metrics like number of kills, Creep Score, and which objectives were secured to determine the chances of winning that game. This determination is based on a Logistic Regression model, developed and trained using 1000 past matches of a professional LoL player (C9 Sneaky).",
