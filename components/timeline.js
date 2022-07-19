@@ -26,12 +26,24 @@ const T_MOBILE = {
     role: 'SDE',
     place: '@ T-Mobile',
     color: '#EA0A8E',
-    period: 'Jun 2019 - Current',
+    period: 'Jun 2019 - Mar 2022',
     facts: [
         "Developed platform for running asynchronous network tests on Android devices.",
         "Automated and optimized Big Data pipelines.",
         "Designed and developed data visualization applications.",
-        "Developed a full-stack application for managing internal users/permissions and data."
+        "Developed a full-stack application for managing core services API and data on the eSIM platform."
+    ]
+}
+
+const MICROSOFT = {
+    imagePath: '/images/me-microsoft.jpg',
+    imageAlt: 'Me as a SDE at microsoft',
+    role: 'SDE',
+    place: '@ Microsoft',
+    color: '#7FBA00',
+    period: 'Jun 2022 - Current',
+    facts: [
+        "Currently on the 3S team to help improve the unified and intelligent search system in the M365 space."
     ]
 }
 
@@ -40,6 +52,7 @@ const ImageBox = (props) => (
         borderColor={useColorModeValue('gray.800', 'gray.100')} 
         border="2px solid"
         borderRadius={5}
+        objectFit={'cover'}
         boxSize="100px"
         alt="picture of me"
         { ...props }

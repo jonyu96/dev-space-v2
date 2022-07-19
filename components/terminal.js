@@ -15,7 +15,7 @@ const INTRO = (
 
         <SectionItem direction="vert">
             <Text mt={2} fontSize={['10px', 'xs']} fontWeight="medium" textAlign="justify">
-                Hi! My name is Jonathan and I am currenly SWE over at T-Mobile. 
+                Hi! My name is Jonathan and I am currenly SWE over at Microsoft. 
                 Feel free to reach out for any opportunities!
             </Text>
         </SectionItem>
@@ -26,7 +26,7 @@ const HOBBIES = (
     <Section mt={3}>
         <Wrap shouldWrapChildren spacing={3}>
             {
-                ["Tennis 🎾", "Running 🏃", "Golf 🏌️", "Piano 🎹", "Korean Fried Chicken 🍗", "Benji 🐶"]
+                ["Tennis 🎾", "Running 🏃", "Golf 🏌️", "Piano 🎹", "Benji 🐶", "Terry 🐶"]
                     .map((interest, index) => (
                         <SectionItem key={index} direction="horz">
                             <Tag textTransform="uppercase" fontSize="10px" fontWeight="bold" variant="outline" color="gray.200" p={1.5} borderRadius={2}>
